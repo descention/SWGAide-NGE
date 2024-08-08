@@ -4,7 +4,7 @@
   <artifactId>SWGAide-Unity</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <dependencies>
-  	<dependency>
+    <dependency>
       <groupId>com.formdev</groupId>
       <artifactId>jide-oss</artifactId>
       <version>3.7.15</version>
