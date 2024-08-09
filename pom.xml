@@ -41,6 +41,24 @@
     </dependency>
   </dependencies>
   <build>
+    <plugin>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-dependency-plugin</artifactId>
+      <executions>
+        <execution>
+          <id>copy-dependencies</id>
+          <phase>prepare-package</phase>
+          <goals>
+            <goal>copy-dependencies</goal>
+          </goals>
+          <configuration>
+            <outputDirectory>
+              ${project.build.directory}/libs
+            </outputDirectory>
+          </configuration>
+        </execution>
+      </executions>
+    </plugin>
     <plugins>
       <plugin>
         <!-- Build an executable JAR -->
