@@ -51,6 +51,7 @@
           <archive>
             <manifest>
               <addClasspath>true</addClasspath>
+              <classpathPrefix>libs/</classpathPrefix>
               <mainClass>swg.SWGAide</mainClass>
             </manifest>
           </archive>
