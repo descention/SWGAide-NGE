@@ -244,8 +244,10 @@ final class SWGHarvesterDialog extends SWGJDialog implements ActionListener {
             } else if (name.getText().length() < 3) {
                 msg = "Enter a description, 3 letters or more";
                 ttl = "Invalid description";
-            } else if (SWGResController.harvestersExists(
-                    name.getText(), SWGResourceTab.galaxy())) {
+            } else if ((currentHarvester == null                                         // new harvester
+                        || clone.isSelected()                                            // clone harvester
+                        || !currentHarvester.getName().equalsIgnoreCase(name.getText())) // edit description
+                      && SWGResController.harvestersExists(name.getText(), SWGResourceTab.galaxy())) {
                 msg = "A harvester with this name exists";
                 ttl = "Name conflict";
             } else if (b <= 0) {
